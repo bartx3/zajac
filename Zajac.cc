@@ -71,8 +71,10 @@ void Zajac::wczytaj_polane() noexcept(false)
 int Zajac::bfs_po_polanie() noexcept(true)
 {
     int licznik = 0;
-    std::vector<Wsporzedne>zasieg_Zajaca(1, wsp_Zajaca);
-    std::vector<Wsporzedne>potencjalny_zasieg_Zajaca;
+		 std::vector<vector<bool>> polana_kopia = polana; //tworzenie roboczej kopii zmiennej polana
+    std::vector<Wsporzedne> zasieg_Zajaca(1, wsp_Zajaca);
+    std::vector<Wsporzedne> potencjalny_zasieg_Zajaca;
+
     while (zasieg_Zajaca.size() > 0)
     {
         for (Wsporzedne pole_z_Zajacem : zasieg_Zajaca)
@@ -80,12 +82,12 @@ int Zajac::bfs_po_polanie() noexcept(true)
             auto zasieg_z_pola = pole_z_Zajacem.dostepne_pola();
             for (Wsporzedne pole : zasieg_z_pola)
             {
-                if (pole.x >= 0 && pole.x < n && pole.y >= 0 && pole.y < m && polana[pole.x][pole.y] == true)
+                if (pole.x >= 0 && pole.x < n && pole.y >= 0 && pole.y < m && polana_kopia[pole.x][pole.y] == true)
                 {
                     if (pole == wsp_nory)
                         return (licznik+1);     //znaleźliśmy naszą norę
                     
-                    polana[pole.x][pole.y] = false;
+                    polana_kopia[pole.x][pole.y] = false;
                     potencjalny_zasieg_Zajaca.push_back(pole);
                 }
             }
