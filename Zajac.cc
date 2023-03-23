@@ -71,7 +71,7 @@ void Zajac::wczytaj_polane() noexcept(false)
 int Zajac::bfs_po_polanie() noexcept(true)
 {
     int licznik = 0;
-		 std::vector<vector<bool>> polana_kopia = polana; //tworzenie roboczej kopii zmiennej polana
+		 std::vector<std::vector<bool>> polana_kopia = polana; //tworzenie roboczej kopii zmiennej polana
     std::vector<Wsporzedne> zasieg_Zajaca(1, wsp_Zajaca);
     std::vector<Wsporzedne> potencjalny_zasieg_Zajaca;
 
