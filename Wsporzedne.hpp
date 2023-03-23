@@ -41,7 +41,7 @@ class Wsporzedne
         /**
          * @brief Przeładowany operator w celu porównywania czy współrzędne są takie same
         */
-        bool operator==(Wsporzedne right);
+        bool operator==(Wsporzedne right) noexcept(true);
 };
 
 #endif
