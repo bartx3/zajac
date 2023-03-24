@@ -17,7 +17,11 @@ Klasa Zajac zawiera:
 - publiczny konstruktor inicjalizujący powyzsze zmienne na podstawie podanych parametrów m i n
 - publiczny konstruktor domyślny
 - publiczną metodę int wczytaj_polane(), wczytującą ze strumienia cin podane w nim dane o polanie, sformatowane zgodnie z trescia zadania. W razie podania niepoprawnych danych, wyrzuca wyjątek.
-- publiczną metodę bfs_po_polanie() zawierającą implementację algorytmu przeszukiwania grafu wszerz, w celu odnalezienia najkrotszej możliwej ścieżki od zająca do nory. Funkcja zwraca długość znalezionej ścieżki bądź -1 jeśli ścieżka nie istnieje.
+- publiczną metodę bfs_po_polanie() zawierającą implementację algorytmu przeszukiwania grafu wszerz, w celu odnalezienia najkrotszej możliwej ścieżki od zająca do nory. Metoda zwraca długość znalezionej ścieżki bądź -1 jeśli ścieżka nie istnieje.
+Złozoność obliczeniowa jak i pamięciowa tego rozwiązania jest O(n*m)
 
-Ponadto napisałem w pliku nagłówkowym func.hpp znajduje się funkcja safetly_input_short, która pozwala na bezpieczne pobranie wartości całkowitej 16-bitowej z cin i umieszczenie w zmiennej. W przypadku jakichkolwiek odstępstw, funkcja ta wyrzuca wyjatek.
+Ponadto napisałem w pliku nagłówkowym func.hpp znajduje się funkcja safetly_input_short(), która pozwala na bezpieczne pobranie wartości całkowitej 16-bitowej z cin i umieszczenie w zmiennej. W przypadku jakichkolwiek odstępstw, funkcja ta wyrzuca wyjatek.
 
+Aby uruchomić ten program na systemie linux, wystarczy wykonać polecenia z pliku Makefile komendą make.
+
+Przepraszam za pobieżność powyższej dokumentacji, ale z racji niefortunnych awarii mojego laptopa, nie byłem w stanie w ciągu ostatnich paru dni wygenerować pliku z opisami funkcji w plikach nagłówkowych za pomocą programu Doxygen.
