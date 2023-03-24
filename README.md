@@ -6,6 +6,7 @@ Zgodnie z treścią zadania, rozwiązanie opracowałem w C++. Ze względu na uż
 Utworzyłem klasy Wsporzedne oraz Zajac
 
 Klasa Wsporzedne zawiera:
+
 -zmienne publiczne x, y będące 16-bitowymi zmiennymi całkowitymi,
 -publiczny konstruktor 2-argumentowy inicjalizowany żądanymi wartościami zmiennych x, y
 -publiczny konstruktor domyślny mający efekt w postaci wywołania powyższego konstruktora dla wartości 0, 0
